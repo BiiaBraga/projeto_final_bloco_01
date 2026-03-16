@@ -6,11 +6,13 @@
 //importações
 import readlinesync = require ('readline-sync');
 import { colors } from './src/util/Colors';
+import { InstrumentoCordas } from './src/model/InstrumentoCordas';
+import { InstrumentoSopro } from './src/model/InstrumentoSopro';
 
 //função principal
 function Main(){
 
-    //inicio
+    //apresentacao
     console.log("\n\n");
     console.log(colors.bg.black, colors.fg.magentastrong, "                                                ");
     console.log("     Gerenciamento       ────█▀█▄▄▄▄─────██▄───   ");
@@ -25,6 +27,14 @@ function Main(){
     let continuar: boolean = true;
     let opcaoMenu: number;
 
+    //Objeto da Classe Instrumento Cordas (Teste)
+    const instrumentosCordas: InstrumentoCordas = new InstrumentoCordas(1, "Violao Folk", "Tagima", 850, 1, 15, 6, "aco");
+    instrumentosCordas.visualizar();
+
+    // Objeto da Classe Instrumento Sopro (teste)
+    const instrumentosSopro: InstrumentoSopro = new InstrumentoSopro(2, "Trompete", "Bach", 6000, 2, 10, "latao", "Bb");
+    instrumentosSopro.visualizar();
+
     //menu
     while(continuar){
 
@@ -36,7 +46,7 @@ function Main(){
         console.log("♬          1. Cadastrar instrumento             ♬  ");
         console.log("♬          2. Atualizar instrumento             ♬  ");
         console.log("♬          3. Deletar instrumento               ♬  ");
-        console.log("♬          4. Visuzalizar instrumentos          ♬  ");
+        console.log("♬          4. Visualizar instrumentos           ♬  ");
         console.log("♬          5. Sair                              ♬  ");
         console.log("♬                                               ♬  ");
         console.log("♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬  ", colors.reset);
