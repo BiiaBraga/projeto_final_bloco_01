@@ -8,34 +8,33 @@ import {Instrumento} from "./Instrumento"
 import { colors } from "../util/Colors";
 
 //sub classe ContaCorrente
-export class InstrumentoSopro extends Instrumento {
+export class InstrumentoPercussao extends Instrumento {
 
     //atributos
     private _material : string;
-    private _afinacao: string;
+    private _diametro: number;
 
     //construtor
-    constructor (id:number, nome:string, marca:string, preco:number, tipo:number, estoque:number, material:string, afinacao: string){
+    constructor (id:number, nome:string, marca:string, preco:number, tipo:number, estoque:number, material:string, diametro: number){
         super(id, nome, marca, preco, tipo, estoque);
         this._material = material;
-        this._afinacao = afinacao;
+        this._diametro = diametro;
     }
 
     //get
     public get material(){
         return this._material;
     }
-
-    public get afinacao(){
-        return this._afinacao;
+    public get diametro(){
+        return this._diametro;
     }
 
     //set
     public set material(material:string){
         this._material = material;
     }
-    public set afinacao(afinacao:string){
-        this._afinacao = afinacao;
+    public set afinacao(diametro:number){
+        this._diametro = diametro;
     }
 
     //metodo visualizar
@@ -43,7 +42,7 @@ export class InstrumentoSopro extends Instrumento {
         super.visualizar();
         console.log(colors.fg.white);
         console.log("Material: " + this._material);
-        console.log("Afinacao: " + this._afinacao);
+        console.log("Diametro: " + this._diametro);
         console.log("*****************************************************");
         console.log(colors.reset);
     }

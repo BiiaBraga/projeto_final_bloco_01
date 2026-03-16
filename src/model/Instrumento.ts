@@ -77,6 +77,9 @@ export abstract class Instrumento{
             case 2:
                 tipo = "Instrumento de Sopro";
                 break;
+            case 3:
+                tipo = "Instrumento de Percussao";
+                break;
         }
 
         console.log(colors.fg.white,"\n\n*****************************************************");
