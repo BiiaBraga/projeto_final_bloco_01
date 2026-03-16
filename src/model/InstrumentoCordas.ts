@@ -5,6 +5,7 @@
 
 //importações
 import {Instrumento} from "./Instrumento"
+import { colors } from "../util/Colors";
 
 //sub classe ContaCorrente
 export class InstrumentoCordas extends Instrumento {
@@ -39,9 +40,10 @@ export class InstrumentoCordas extends Instrumento {
     //metodo visualizar
     public visualizar(): void {
         super.visualizar();
-        console.log("Numero de cordas: " + this._numCordas);
+        console.log(colors.fg.white,"Numero de cordas: " + this._numCordas);
         console.log("Tipo de cordas: " + this._tipoCordas);
         console.log("*****************************************************");
+        console.log(colors.reset);
     }
 
 }

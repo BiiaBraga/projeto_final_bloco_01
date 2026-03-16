@@ -3,6 +3,9 @@
  * Data: 16/03
  */
 
+//importacoes
+import { colors } from "../util/Colors";
+
 //classe abstrata de Instrumentos
 export abstract class Instrumento{
 
@@ -76,13 +79,14 @@ export abstract class Instrumento{
                 break;
         }
 
-        console.log("\n\n*****************************************************");
+        console.log(colors.fg.white,"\n\n*****************************************************");
         console.log("Instrumento:\n");
         console.log("Código do produto: " + this._id);
         console.log("Nome: " + this._nome);
         console.log("Preco: R$" + this._preco.toFixed(2));
         console.log("Marca: " + this._marca);
         console.log("Tipo de instrumento: " + tipo);
+        console.log(colors.reset);
         
     }
     

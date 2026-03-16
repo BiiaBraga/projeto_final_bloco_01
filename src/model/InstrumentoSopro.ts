@@ -5,6 +5,7 @@
 
 //importações
 import {Instrumento} from "./Instrumento"
+import { colors } from "../util/Colors";
 
 //sub classe ContaCorrente
 export class InstrumentoSopro extends Instrumento {
@@ -40,9 +41,10 @@ export class InstrumentoSopro extends Instrumento {
     //metodo visualizar
     public visualizar(): void {
         super.visualizar();
-        console.log("Material: " + this._material);
+        console.log(colors.fg.white,"Material: " + this._material);
         console.log("Afinacao: " + this._afinacao);
         console.log("*****************************************************");
+        console.log(colors.reset);
     }
 
 }
