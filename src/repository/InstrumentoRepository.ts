@@ -15,4 +15,7 @@ export interface InstrumentoRepository{
     deletar(id: number): void;
     listarTodas(): void;
 
+    //outros metodos
+    registrarVenda(id:number, quantidade:number): void;
+
 }

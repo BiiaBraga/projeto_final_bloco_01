@@ -41,7 +41,7 @@ export class InstrumentoSopro extends Instrumento {
     //metodo visualizar
     public visualizar(): void {
         super.visualizar();
-        console.log(colors.fg.white);
+        //console.log(colors.fg.white);
         console.log("Material: " + this._material);
         console.log("Afinacao: " + this._afinacao);
         console.log("*****************************************************");

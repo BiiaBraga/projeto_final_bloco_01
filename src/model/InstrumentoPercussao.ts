@@ -40,7 +40,7 @@ export class InstrumentoPercussao extends Instrumento {
     //metodo visualizar
     public visualizar(): void {
         super.visualizar();
-        console.log(colors.fg.white);
+        //console.log(colors.fg.white);
         console.log("Material: " + this._material);
         console.log("Diametro: " + this._diametro);
         console.log("*****************************************************");

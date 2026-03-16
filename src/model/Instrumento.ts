@@ -88,8 +88,8 @@ export abstract class Instrumento{
         console.log("Nome: " + this._nome);
         console.log("Preco: R$" + this._preco.toFixed(2));
         console.log("Marca: " + this._marca);
+        console.log("Estoque: " + this._estoque);
         console.log("Tipo de instrumento: " + tipo);
-        console.log(colors.reset);
         
     }
     

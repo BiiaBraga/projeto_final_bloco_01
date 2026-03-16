@@ -40,7 +40,7 @@ export class InstrumentoCordas extends Instrumento {
     //metodo visualizar
     public visualizar(): void {
         super.visualizar();
-        console.log(colors.fg.white);
+        //console.log(colors.fg.white);
         console.log("Numero de cordas: " + this._numCordas);
         console.log("Tipo de cordas: " + this._tipoCordas);
         console.log("*****************************************************");

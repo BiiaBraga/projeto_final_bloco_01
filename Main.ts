@@ -64,8 +64,24 @@ function Main(){
                 instrumentos.listarTodas();
                 keyPress();
                 break;
-
+            
             case 5:
+                console.log(colors.fg.magentastrong, "\nRegistrar venda", colors.reset);
+
+                let continuarVenda: boolean = true;
+                while(continuarVenda){
+                    console.log(colors.fg.white);
+                    id = readlinesync.questionInt("\nDigite o codigo do instrumento vendido: ");
+                    let quantidade = readlinesync.questionInt("Digite a quantidade: ");
+                    console.log(colors.reset);
+                    instrumentos.registrarVenda(id, quantidade);
+
+                    continuarVenda = readlinesync.keyInYNStrict("Deseja acrescentar mais instrumentos a venda? ");
+                }
+                keyPress();
+                break;
+
+            case 6:
                 console.log(colors.fg.magentastrong, "\nSair", colors.reset);
                 continuar = false;
                 console.log(colors.reset);
@@ -109,7 +125,8 @@ function menu(): number {
         console.log("♬          2. Atualizar instrumento             ♬  ");
         console.log("♬          3. Deletar instrumento               ♬  ");
         console.log("♬          4. Visualizar instrumentos           ♬  ");
-        console.log("♬          5. Sair                              ♬  ");
+        console.log("♬          5. Registrar vendas                  ♬  ");
+        console.log("♬          6. Sair                              ♬  ");
         console.log("♬                                               ♬  ");
         console.log("♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬ ♬  ", colors.reset);
         //console.log("\n");
@@ -132,7 +149,7 @@ function apresentacao(): void{
     console.log("        musicais         ─▀▀▀──▀█▄█▀─▀█▄█▀─────   ");
     console.log("                                                 ", colors.reset);
 }
-
+//funcao que criaIntrumento para ser cadastrado ou atualizado
 function criaInstrumento(id: number): Instrumento{
     let preco, estoque, numCordas, tipo, diametro: number;
     let nome, marca, material, afinacao, tipoCordas : string;
