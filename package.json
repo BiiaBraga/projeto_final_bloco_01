@@ -1,0 +1,28 @@
+{
+  "name": "projeto_final_bloco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BiiaBraga/projeto_final_bloco_01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BiiaBraga/projeto_final_bloco_01/issues"
+  },
+  "homepage": "https://github.com/BiiaBraga/projeto_final_bloco_01#readme",
+  "dependencies": {
+    "@types/node": "^25.5.0",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@types/readline-sync": "^1.4.8"
+  }
+}
